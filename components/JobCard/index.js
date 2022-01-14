@@ -22,40 +22,44 @@ const JobCard = ({
                  src={logo}
                  alt={`${company} logo`}
             />
-            <div className={styles.header}>
-                <span className={styles.company}>
-                    {company}
-                </span>
-                {isNew && (
-                    <span className={styles.newBadge}>
-                        new!
+            <div>
+                <div className={styles.header}>
+                    <span className={styles.company}>
+                        {company}
                     </span>
-                )}
-                {isFeatured && (
-                    <span className={styles.featuredBadge}>
-                        featured
+                    {isNew && (
+                        <span className={styles.newBadge}>
+                            new!
+                        </span>
+                    )}
+                    {isFeatured && (
+                        <span className={styles.featuredBadge}>
+                            featured
+                        </span>
+                    )}
+                </div>
+                <div className={styles.position}>
+                    <a href={'#'}>
+                        {position}
+                    </a>
+                </div>
+                <div className={styles.summary}>
+                    <span>
+                        {postedAt}
                     </span>
-                )}
-            </div>
-            <div className={styles.position}>
-                {position}
-            </div>
-            <div className={styles.summary}>
-                <span>
-                    {postedAt}
-                </span>
-                <span>
-                    {contract}
-                </span>
-                <span>
-                    {location}
-                </span>
+                    <span>
+                        {contract}
+                    </span>
+                    <span>
+                        {location}
+                    </span>
+                </div>
             </div>
             <div className={styles.categoryContainer}>
                 {categories.map((category) => (
-                    <span className={styles.categoryLabel}>
+                    <button className={styles.categoryLabelButton}>
                         {category}
-                    </span>
+                    </button>
                 ))}
             </div>
         </div>
