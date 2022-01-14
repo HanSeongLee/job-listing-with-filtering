@@ -1,3 +1,5 @@
+@import "styles/utils";
+
 .card {
   background: #FFFFFF;
   display: flex;
@@ -6,10 +8,15 @@
   border-radius: 5px;
   padding: 20px;
 
+  @include media(">desktop") {
+    padding: 20px 40px;
+  }
+
   .categoryContainer {
     display: flex;
     flex-wrap: wrap;
     grid-gap: 16px;
+    flex: 1;
 
     .categoryLabel {
       position: relative;
@@ -34,6 +41,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include media(">desktop") {
+          transition: background 0.3s;
+
+          &:hover {
+            background: #2B3939;
+          }
+        }
       }
     }
   }
@@ -47,5 +62,14 @@
     border: 0;
     padding: 4px;
     cursor: pointer;
+
+    @include media(">desktop") {
+      transition: color 0.3s;
+
+      &:hover {
+        color: #5CA5A5;
+        text-decoration: underline;
+      }
+    }
   }
 }
