@@ -6,7 +6,8 @@ const JobCard = ({
                      logo, company, position, postedAt,
                      new: isNew, featured: isFeatured,
                      contract, location, role, level,
-                     languages, tools }) => {
+                     languages, tools, onCategoryClick
+                 }) => {
     const categories = useMemo(() => {
         return [
             role, level,
@@ -57,7 +58,9 @@ const JobCard = ({
             </div>
             <div className={styles.categoryContainer}>
                 {categories.map((category) => (
-                    <button className={styles.categoryLabelButton}>
+                    <button className={styles.categoryLabelButton}
+                            onClick={_ => onCategoryClick(category)}
+                    >
                         {category}
                     </button>
                 ))}

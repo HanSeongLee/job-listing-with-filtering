@@ -1,0 +1,40 @@
+@import "styles/utils";
+
+.main {
+  padding: 56px 24px 24px;
+
+  @include media(">desktop") {
+    padding: 76px 24px 120px;
+  }
+
+  &.filter {
+    padding: 0px 24px 24px;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+    max-width: 327px;
+    margin: auto;
+
+    @include media(">desktop") {
+      max-width: 1110px;
+      grid-gap: 24px;
+    }
+
+    .categoryFilterContainer {
+      position: relative;
+      top: -36px;
+      left: 0;
+      width: 100%;
+      margin-bottom: -20px;
+
+      @include media(">desktop") {
+        top: 0px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
