@@ -62,6 +62,9 @@ export default function Home() {
         <main className={cn(styles.main, {
           [styles.filter]: state.filter.length > 0,
         })}>
+          <h1 className={styles.hidden}>
+            Job Listing with Filter
+          </h1>
           <div className={styles.container}>
             {state.filter.length > 0 && (
                 <div className={styles.categoryFilterContainer}>

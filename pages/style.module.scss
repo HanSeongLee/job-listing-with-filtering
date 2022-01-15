@@ -11,6 +11,11 @@
     padding: 0px 24px 24px;
   }
 
+  .hidden {
+    position: absolute;
+    top: -9999px;
+  }
+
   .container {
     position: relative;
     display: flex;
